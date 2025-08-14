@@ -1,0 +1,401 @@
+
+<!-- saved from url=(0079)http://www.inthem4trix.com/pages/StaticMixerSelector_1/StaticMixerSelector.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dosing System Encoder</title>
+    <link rel="stylesheet" href="./SD_Encoder_files/bootstrap.min.css">
+    <link rel="stylesheet" href="./SD_Encoder_files/Style.css"> 
+    
+</head>
+<body>
+
+    <div class="container-1">
+    
+        <div class="flex-box-container-1">
+            
+            <h3>    
+            <img id="logo-opt-ppal" src="./SD_Encoder_files/logo-nfs.png" height="50" alt=""> 
+            Codificador Sistemas de Dosificación 
+            </h3>
+    
+        </div>
+    </div>
+
+
+    <div class="container-2">
+        <div class="flex-box-container-2">
+            <div id="informacion" class="flex-box-informacion">  
+
+                <h7>Ingrese la Siguiente Información:</h7><br><br>
+                        <!--- 
+                <label for="caudal">Caudal (GPH):</label>
+                <input type="number" id="caudal" name="caudal" ><br>
+                    -->
+                <label>
+                    TIPO DE SISTEMA:<input type="" id="tipo_sistema" name="" value="SD" required="" onchange="">  
+                </label>  
+                
+                <label> Tipo de Montaje:
+                    <select name="Tipo de Montaje" id="TipoDeMontaje" value="Skid" onchange="calculator()">
+                        <option value="K">Skid</option>
+                        <option value="S">Side Mount</option>
+                        <option value="B">Bottom Mount</option>
+                        <option value="T">Top Mount</option>
+                        <option value="G">Gabinete de Seguridad</option>
+                        <option value="BO">Base Omega</option>
+                        <option value="M">Marco Estructural</option>                     
+                        <option value="W">Wall Mount</option>
+                    </select>
+                </label>
+
+                <label> Número de Bombas:
+                    <select name="NumeroDeBombas" id="NumeroDeBombas" onchange="calculator()">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>                     
+                        <option value="8">8</option>
+                    </select>
+                </label>
+
+                <label> Marca Bomba:
+                    <select name="MarcaDeBomba" id="MarcaDeBomba" onchange="calculator()">
+                        <option value="M">Milton Roy</option>
+                        <option value="L">LMI</option>
+                        <option value="W">Williams</option>
+                        <option value="S">Seepex</option>
+                        <option value="LQ">Liquiflo</option>
+                        <option value="LC">LINC</option>
+                        <option value="A">ARO</option>                     
+                        <option value="I">ITC</option>
+                        <option value="AB">ALBIN</option>
+                        <option value="N">NFS</option>
+                    </select>
+                </label>
+
+                <label> Modelo Bomba:
+                    <select name="ModeloDeBomba" id="ModeloDeBomba" onchange="calculator()">
+                        <option value="01">mRoy A</option>
+                        <option value="02">mRoy B</option>
+                        <option value="03">mRoy H</option>
+                        <option value="04">mRoy J</option>
+                        <option value="05">mRoy M</option>
+                        <option value="06">mRoy P</option>
+                        <option value="07">mRoy XT</option>
+                        <option value="08">mRoy XW</option>
+                        <option value="09">Miroyal B</option>
+                        <option value="10">Miroyal C</option>
+                        <option value="11">Miroyal D</option>
+                        <option value="12">Miroyal G</option>
+                        <option value="13">Macroy D</option>
+                        <option value="14">Macroy G</option>
+                        <option value="15">MaxRoy B</option>
+                        <option value="16">mRoy T</option>
+                        <option value="17">PrimeRoyal K</option>
+                        <option value="18">mRoy S</option>
+                        <option value="19">SolaryRoy</option>                       
+                    </select>
+                </label>
+
+
+                <label> Número de Tanques:
+                    <select name="NumeroDeTanques" id="NumeroDeTanques" onchange="calculator()">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>                                           
+                    </select>
+                </label>
+
+                <label> Material del Tanque:
+                    <select name="MaterialDelTanque" id="MaterialDelTanque" onchange="calculator()">
+                        <option value="0">No suministra</option>
+                        <option value="M4">2</option>
+                        <option value="M6">3</option>
+                        <option value="P">3</option>     
+                        <option value="F">3</option>                                                
+                    </select>
+                </label>
+
+                <label> Capacidad del Tanque:
+                    <select name="CapacidadDelTanque" id="CapacidadDelTanque" onchange="calculator()">
+                        <option value="1"> 50L </option>
+                        <option value="2"> 100L </option>
+                        <option value="3"> 250L </option>
+                        <option value="4"> 500L </option>
+                        <option value="5"> 750L </option>
+                        <option value="6"> 1000L </option>
+                        <option value="7"> 1500L </option>
+                        <option value="8"> 2000L </option>
+                        <option value="9"> >=3000L <=10000L </option>
+                        <option value="10"> Mayores a 10.000L </option>
+                        <option value="11"> 200L </option>                                                                                         
+                    </select>
+                </label>
+
+                <label> Tipo de TC:
+                    <select name="TipoTablero" id="TipoTablero" onchange="calculator()">
+                        <option value="0"> Sin Tablero </option>
+                        <option value="1"> Tablero sin PLC </option>
+                        <option value="2"> Tablero con PLC </option>
+                        <option value="3"> Tablero con PLC + HMI </option>
+                        <option value="4"> Botonera </option>                                                                                                  
+                    </select>
+                </label>
+
+                <label> Clasificación:
+                    <select name="Clasificacion" id="Clasificacion" onchange="calculator()">
+                        <option value="N4"> NEMA 4 </option>
+                        <option value="N7"> NEMA 7 </option>
+                        <option value="55"> IP55 </option>
+                        <option value="65"> IP65 </option>                                                                                                                  
+                    </select>
+                </label>
+
+                <label> Puntos de Aplicación:
+                    <select name="PuntosDeClasificacion" id="PuntosDeClasificacion" onchange="calculator()">
+                        <option value=""> Un punto de aplicación </option>
+                        <option value="PA2"> Dos puntos de aplicación </option>                                                                                                                                    
+                    </select>
+                </label>
+
+                <label> Instrumentación
+                    <select id="Instrumentación" onchange="calculator()">
+                        <option value="1"> PIT </option>
+                        <option value="2"> FIT </option>                                                                                                                                    
+                    </select>
+                </label>
+
+
+
+
+
+
+
+
+
+
+
+                            
+<!--                        
+                <label for="Densidad (kg/L)">
+                    Tipo : <input type="number" id="densidad" name="densidad" value="1.0" required="" onchange="calculator()">
+                </label> 
+
+                <label for="Viscosidad (cP)">
+                    Viscosidad (cP): <input type="number" name="viscosidad" id="viscosidad" value="1.0" required="" onchange="calculator()">
+                </label>
+            
+                                
+                <label> Diámetro (in):
+                    <select name="diametro" id="diametro" onchange="calculator()">
+                        <option value="0.5">1/2"</option>
+                        <option value="0.75">3/4"</option>
+                        <option value="1.0">1"</option>
+                        <option value="1.5"> 1 1/2"</option>
+                        <option value="2.0">2"</option>
+                        <option value="3.0">3"</option>
+                        <option value="4.0">4"</option>
+                        <option value="6.0">6"</option>
+                        <option value="8.0">8"</option>
+                        <option value="10.0">10"</option>
+                        <option value="12.0">12"</option>
+                        <option value="14.0">14"</option>
+                        <option value="16.0">16"</option>
+                    </select>
+                </label>
+               
+
+
+                <label> Material:
+                    <select name="material" id="material" onchange="calculator()">
+                        <option value="2">304SS</option>
+                        <option value="3">316SS</option>
+                        <option value="4">PVC</option>
+                        <option value="1">Carbón Steel</option>
+                    </select>
+                </label>
+                
+                        
+                <label>
+                    Máx Caida Presión (psi) :<input type="number" id="MaxCaidaPresion" name="MaxCaidaPresion" value="5" required="">  
+                </label>
+                
+
+                
+
+                <form>
+                    <fieldset>
+                        <label>Conexión
+                            <select name="conexion" id="conexion" onchange="calculator()">
+                                <option value="NPT">Roscada</option>
+                                <option value="SO">Bridada</option>
+                                <option value="CL">Sanitaria</option>
+                            </select>
+                        </label>
+    
+                        <label>Rating
+                            <select name="rating" id="rating" onchange="calculator()">
+                                <option value="1">150#</option>
+                                <option value="2">300#</option>
+                                <option value="3">600#</option>
+                            </select>
+                        </label>
+    
+                        <label>Material Elementos
+                            <select name="materialElementos" id="materialElementos" onchange="calculator()">
+                                <option value="2">304SS (Estandar)</option>
+                                <option value="3">316SS</option>
+                                <option value="4">304SS + Fibra de vidrio</option>
+                                
+                            </select>
+                        </label>
+    
+                        <label>Unión
+                            <select name="union" id="union" onchange="calculator()">
+                                <option value="">Sin</option>
+                                <option value="B"> Boquilla 1/2"</option>
+                                <option value="B20">Boquilla 3/4"</option>
+                                <option value="B25">Boquilla 1"</option>
+                                <option value="B40">Boquilla 1.5"</option>                          
+                            </select>
+                        </label>
+    
+                        
+    
+                    </fieldset>
+                </form>
+
+ -->   
+                
+                <form>
+                        <fieldset>
+                             
+                            <h7> Modelo:</h7>
+                            <h4 id="MODELO" value="MX">MX800NPT1226</h4>
+                            <h7> Modelo alternativo:</h7>
+                            <h4 id="MODELO2" value="MX">ME-62NPT8022-1</h4>
+                          
+
+                        </fieldset>
+                </form>
+                   
+
+                
+               
+        <!--
+
+            </div> 
+
+            <div id="resultadosDimensionamiento" class="flex-box-resultados">  
+                <h7>Resultados:</h7><br><br>
+
+                <form>
+                    <fieldset>
+                      <legend>Resultados Dimensionamiento</legend>
+
+                        <label> 
+                          Velocidad (m/s): &nbsp;&nbsp;&nbsp;&nbsp;  <h7 id="V" value="0">1.17</h7>
+                        </label>
+
+                        <label> 
+                            Numero de Reynolds: &nbsp;&nbsp;&nbsp;&nbsp;  <h7 id="reynolds" value="0">7916</h7>
+                        </label>
+
+                        <label> 
+                            Número de Elementos: &nbsp;&nbsp;&nbsp;&nbsp;  <h7 id="NumeroElementos" value="0">6</h7>
+                        </label>
+
+                        <label> 
+                            Longitud (mm): &nbsp;&nbsp;&nbsp;&nbsp;  <h7 id="Longitud" value="0">1266</h7>
+                        </label>
+
+                        <label> 
+                            Perdida de presión (psi): &nbsp;&nbsp;&nbsp;&nbsp;  <h7 id="PerdidaPresion" value="0">1.26</h7>
+                        </label>
+                      
+                    </fieldset>
+
+                    
+                </form>
+
+                <button class="btn btn-primary" id="buttonCalculate" onclick="calculator()"> Calcular</button>
+
+                <h5 id="Espacio" class="alarma"> <br> </h5>
+                <h5 id="alarmaVelocidad" class="alarma"></h5>
+                <h5 id="alarmaPresion" class="alarma"></h5>
+
+-->
+<!--
+            </div>
+-->
+             <!--Cierre de div resultados dimensionamiento-->
+
+<!--
+            </div>
+-->
+       
+        <!--Cierre flex-box-comtainer 2  que contiene Info y resultados-->
+  <!--
+            </div>
+-->
+    <!--Cierre comtainer 2  que contiene flex box container 1 y 2Info y resultados-->
+
+
+
+<!--
+    <div class="container-3">
+        <table class="tableResults">
+            <tbody><tr><th>Descripción</th>
+            <th>Modelo</th>
+            <th>Precio de lista</th>
+            <th>Moneda</th>
+            <th>Desc</th>
+            <th>Qty</th>
+            <th>und</th>
+            <th>V. Unit</th>
+            <th>V. Parcial</th>
+            <th> W. Unit (kg)</th>
+            <th>W. Parcial (kg)</th>
+
+            </tr><tr>
+            <td id="tdDescription">Mezclador Estático, 8 in , Conexión:NPT , Rating:150# , Material Cuerpo:304SS, Material Elementos:304SS, Número de Elementos: 6  </td>
+            <td id="tdModel">MX800NPT1226</td>
+            <td id="tdPriceL">0</td>
+            <td id="tdMoneda">USD</td>
+            <td id="tdDiscount">0.55</td>
+            <td id="tdQty">1</td>
+            <td id="tdUnidades">und</td>
+            <td id="tdUnitaryPrice">0</td>
+            <td id="tdParcialPrice">0</td>
+            <td id="tdUnitaryWeight">0</td>
+            <td id="tdParcialWeight">0</td>
+            </tr>
+
+
+        </tbody></table>
+
+    </div>
+
+
+    <div class="container-4" id="resultadoImagen">
+    <img width="100px" src="./Static Mixer Selector_files/novatecfs_mezcladores_estaticos.jpg"></div>
+
+    <div class="container-5" id="resultadoLinks">
+
+        <a href="http://www.inthem4trix.com/pages/StaticMixerSelector_1/Documents/Datasheet-Novatec-FS-Mezcladores-Est%C3%A1ticos.pdf" font=""> Catalogo </a> <br>
+       
+
+
+    </div>
+  -->
+  
+
+    
+    <script src="./SD_Encoder_files/script.js"> </script>
+
+
+</body></html>
