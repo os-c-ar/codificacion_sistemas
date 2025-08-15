@@ -38,6 +38,7 @@
                 
                 <label> Tipo de Montaje:
                     <select name="Tipo de Montaje" id="TipoDeMontaje" value="Skid" onchange="calculator()">
+                        <option value="">Seleccione una opción</option>
                         <option value="K">Skid</option>
                         <option value="S">Side Mount</option>
                         <option value="B">Bottom Mount</option>
@@ -64,6 +65,7 @@
 
                 <label> Marca Bomba:
                     <select name="MarcaDeBomba" id="MarcaDeBomba" onchange="calculator()">
+                        <option value="">Seleccione una opción</option>
                         <option value="M">Milton Roy</option>
                         <option value="L">LMI</option>
                         <option value="W">Williams</option>
@@ -77,6 +79,24 @@
                     </select>
                 </label>
 
+                <label> Modelo Bomba:
+                    <select name="ModeloDeBomba" id="ModeloDeBomba" onchange="calculator()">
+                        <option value="">Seleccione una opción de Marca Primero</option>                                                                               
+                    </select>
+                </label>
+
+
+
+
+
+
+
+
+
+
+
+
+                <!-- 
                 <label> Modelo Bomba:
                     <select name="ModeloDeBomba" id="ModeloDeBomba" onchange="calculator()">
                         <option value="01">mRoy A</option>
@@ -100,6 +120,7 @@
                         <option value="19">SolaryRoy</option>                       
                     </select>
                 </label>
+                -->
 
 
                 <label> Número de Tanques:
@@ -162,12 +183,15 @@
                     </select>
                 </label>
 
+
+<!--
                 <label> Instrumentación
                     <select id="Instrumentación" onchange="calculator()">
                         <option value="1"> PIT </option>
                         <option value="2"> FIT </option>                                                                                                                                    
                     </select>
                 </label>
+
 
 
 
