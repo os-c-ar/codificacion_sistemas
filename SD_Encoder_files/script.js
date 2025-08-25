@@ -116,7 +116,7 @@ const optionsMap2 = {
 
 
 updateSelectOptions('MarcaDeBomba', 'ModeloDeBomba', optionsMap);
-updateSelectOptions2('NumeroDeTanques', 'MaterialDelTanque', 'CapacidadDelTanque',optionsMap2);
+//SelectOptions2('NumeroDeTanques', 'MaterialDelTanque', 'CapacidadDelTanque',optionsMap2);//
 
 function calculator()
 {
@@ -191,6 +191,7 @@ function updateSelectOptions(primarySelectId, secondarySelectId, optionsMap) {
     });
 }
 
+/*
 function updateSelectOptions2(primarySelectId, secondarySelectId,TerciarySelectId, optionsMap) {
     const primarySelect = document.getElementById(primarySelectId);
     const secondarySelect = document.getElementById(secondarySelectId);
@@ -215,6 +216,8 @@ function updateSelectOptions2(primarySelectId, secondarySelectId,TerciarySelectI
         }
     });
 }
+*/
+
 
 // Ejemplo de uso:
 // const optionsMap = {
